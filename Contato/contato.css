@@ -1,0 +1,260 @@
+@font-face {
+  font-family: "Bebas Neue Custom";
+  src:
+    url("../Font/BebasNeueLight.woff2") format("woff2"),
+    url("../Font/BebasNeueLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonte Regular (400) */
+@font-face {
+  font-family: "Bebas Neue Custom";
+  src: url(../Font/BebasNeueBold.woff2") format("woff2"),
+    url("../Font/BebasNeueBold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Custom";
+  src:
+    url("../Font/Roboto-Light.woff2") format("woff2"),
+    url("../Font/Roboto-Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Custom";
+  src:
+    url("../Font/Roboto-Regular.woff2") format("woff2"),
+    url("../Font/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(72, 56, 56);
+  font-family: "Roboto Custom", sans-serif;
+  padding-top: 80px;
+  border-bottom: 8px solid rgb(54, 101, 107);
+}
+
+.menu-suspenso {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.botao {
+  /* ... mesmo estilo ... */
+  background-color: rgb(240, 248, 164);
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 20pt;
+  cursor: pointer;
+  border: none;
+}
+.botao:hover {
+  background-color: rgb(117, 176, 111);
+  color: rgb(240, 248, 164);
+  transform: scale(1.05);
+}
+.conteudo {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(240, 248, 164);
+  min-width: 180px;
+  border-radius: 10px;
+}
+.conteudo a {
+  color: rgb(72, 56, 56);
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  font-size: 12pt;
+}
+.conteudo a:hover {
+  background-color: rgb(117, 176, 111);
+  color: rgb(240, 248, 164);
+}
+.menu-suspenso:hover .conteudo {
+  display: block;
+}
+
+.container-contato {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.topo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.topo h4 {
+  font-family: "Bebas Neue Custom", sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+  color: rgb(240, 248, 164);
+}
+
+.topo p {
+  font-family: "Roboto Custom", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  border-top: 1pt solid rgb(240, 248, 164);
+  border-bottom: 1pt solid rgb(240, 248, 164);
+  color: rgb(240, 248, 164);
+  display: inline-block;
+  padding: 5px 20px;
+}
+
+/* --- Grid para duas colunas (Desktop) --- */
+.formulario-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  background-color: rgba(240, 248, 164, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+}
+
+/* --- Coluna de Informações --- */
+.info-contato {
+  background-color: rgb(117, 176, 111);
+  padding: 30px;
+  border-radius: 15px;
+  color: rgb(72, 56, 56);
+}
+.info-contato h3 {
+  font-family: "Bebas Neue Custom", sans-serif;
+  font-size: 28px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+.info-contato p {
+  margin: 20px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-contato i {
+  width: 25px;
+  font-size: 18px;
+}
+.redes-sociais {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+.redes-sociais a {
+  color: rgb(72, 56, 56);
+  font-size: 28px;
+  transition: transform 0.3s;
+}
+.redes-sociais a:hover {
+  transform: scale(1.2);
+  color: rgb(240, 248, 164);
+}
+
+/* --- Coluna do Formulário --- */
+.form-contato fieldset {
+  border: 2px solid rgb(240, 248, 164);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.form-contato legend {
+  font-family: "Bebas Neue Custom", sans-serif;
+  font-size: 20px;
+  color: rgb(240, 248, 164);
+  padding: 0 10px;
+}
+.campo,
+.campo-radio {
+  margin-bottom: 15px;
+}
+.campo label,
+.campo-radio span {
+  display: block;
+  margin-bottom: 5px;
+  color: rgb(240, 248, 164);
+  font-weight: bold;
+}
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(240, 248, 164);
+  font-family: "Roboto Custom", sans-serif;
+}
+.campo-radio label {
+  margin-right: 15px;
+  font-weight: normal;
+  color: rgb(240, 248, 164);
+}
+.btn-enviar {
+  width: 100%;
+  background-color: rgb(240, 248, 164);
+  color: rgb(72, 56, 56);
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Bebas Neue Custom", sans-serif;
+  letter-spacing: 2px;
+}
+
+.btn-enviar:hover {
+  background-color: rgb(117, 176, 111);
+  color: rgb(240, 248, 164);
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+  .formulario-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+  .topo h4 {
+    font-size: 45px;
+  }
+  .topo p {
+    font-size: 22px;
+  }
+  .menu-suspenso {
+    top: 10px;
+    right: 10px;
+  }
+  .botao {
+    padding: 8px 12px;
+    font-size: 18pt;
+  }
+}

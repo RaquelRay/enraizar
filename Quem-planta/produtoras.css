@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Bebas Neue Custom";
+  src:
+    url("../Font/BebasNeueLight.woff2") format("woff2"),
+    url("../Font/BebasNeueLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonte Regular (400) */
+@font-face {
+  font-family: "Bebas Neue Custom";
+  src: url(../Font/BebasNeueBold.woff2") format("woff2"),
+    url("../Font/BebasNeueBold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Custom";
+  src:
+    url("../Font/Roboto-Light.woff2") format("woff2"),
+    url("../Font/Roboto-Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Custom";
+  src:
+    url("../Font/Roboto-Regular.woff2") format("woff2"),
+    url("../Font/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden; /*para evitar rolagem horizontal*/
+  padding-top: 100px;
+  background-color: rgb(72, 56, 56);
+}
+
+/* Menu fixo */
+.menu-suspenso {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.botao {
+  background-color: rgb(240, 248, 164);
+  color: rgb(72, 56, 56);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 20pt;
+  transition: all 0.3s ease;
+}
+
+.botao:hover {
+  background-color: rgb(117, 176, 111);
+  color: rgb(240, 248, 164);
+  transform: scale(1.05);
+}
+
+.conteudo {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: rgb(240, 248, 164);
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.conteudo a {
+  color: rgb(72, 56, 56);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: "Roboto Custom", sans-serif;
+  font-size: 12pt;
+  transition: background-color 0.3s;
+}
+
+.conteudo a:hover {
+  background-color: rgb(117, 176, 111);
+  color: rgb(240, 248, 164);
+}
+
+.menu-suspenso:hover .conteudo {
+  display: block;
+}
+
+.painel {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "lateral-esq coluna1 coluna2"
+    "lateral-esq-baixo rodape rodape";
+  font-family: "Roboto Custom";
+  justify-items: center;
+}
+
+.painel img {
+  max-width: 450px;
+  border-radius: 10px;
+  border: 8px solid rgb(240, 248, 164);
+}
+
+.topo {
+  grid-area: topo;
+  padding: 20px;
+}
+
+.topo h4 {
+  font-family: "Bebas Neue Custom", sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: rgb(240, 248, 164);
+}
+
+.topo p {
+  font-family: "Roboto Custom", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-top: 1pt solid rgb(240, 248, 164);
+  border-bottom: 1pt solid rgb(240, 248, 164);
+  color: rgb(240, 248, 164);
+}
+
+.lateral-esq {
+  grid-area: lateral-esq;
+}
+
+.lateral-esq-baixo {
+  grid-area: lateral-esq-baixo;
+  font-family: "Roboto Custom", sans-serif;
+  font-size: 12pt;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.coluna1 {
+  grid-area: coluna1;
+}
+
+.coluna2 {
+  grid-area: coluna2;
+}
+
+.rodape {
+  grid-area: rodape;
+}
+
+@media screen and (max-width: 1980px) {
+  body {
+    padding-top: 40px;
+  }
+
+  .painel {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+      "lateral-esq topo topo"
+      "lateral-esq-baixo coluna1 coluna2"
+      "rodape rodape rodape";
+    font-family: "Roboto Custom";
+    justify-items: center;
+    align-items: flex-start;
+    margin-right: 20px;
+  }
+
+  .topo {
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .coluna1,
+  .coluna2 {
+    display: block;
+    font-family: "Roboto Custom", sans-serif;
+    font-size: 14pt;
+    font-weight: 100;
+    text-align: justify;
+    margin-right: 40px;
+    padding: 0 0 0 40px;
+    line-height: 1.2;
+    color: rgb(240, 248, 164);
+    hyphens: auto;
+    margin-bottom: 20px;
+  }
+
+  .coluna1 p:first-of-type,
+  .coluna2 p:first-of-type {
+    text-indent: 20px;
+  }
+
+  .painel img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .lateral-esq-baixo {
+    display: block;
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 10pt;
+    font-style: italic;
+    color: rgb(117, 176, 111);
+  }
+
+  .rodape {
+    display: block;
+    justify-items: center;
+    text-align: center;
+    background-color: rgb(240, 248, 164);
+    color: rgb(72, 56, 56);
+    width: 100%;
+    padding: 10px;
+    border-top: 6px solid rgb(54, 101, 107);
+  }
+
+  .rodape i {
+    color: rgb(72, 56, 56);
+  }
+}
+
+/* Media Query para Mobile */
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 30px;
+  }
+
+  .topo {
+    margin-bottom: 20px;
+  }
+
+  .menu-suspenso {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+  }
+
+  .botao {
+    background-color: rgb(240, 248, 164);
+    color: rgb(72, 56, 56);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18pt;
+  }
+
+  .conteudo {
+    background-color: rgb(240, 248, 164);
+  }
+
+  .conteudo a {
+    color: rgb(72, 56, 56);
+    font-size: 11pt;
+    padding: 10px 14px;
+  }
+
+  .conteudo a:hover {
+    background-color: rgb(117, 176, 111);
+    color: rgb(240, 248, 164);
+  }
+
+  .painel {
+    grid-template-columns: 1fr; /* uma única coluna */
+    grid-template-areas:
+      "topo"
+      "lateral-esq"
+      "lateral-esq-baixo"
+      "coluna1"
+      "coluna2"
+      "rodape";
+  }
+
+  /* Mantendo as configurações originais do topo no mobile */
+  .topo {
+    padding: 0;
+  }
+
+  .topo h4 {
+    font-family: "Bebas Neue Custom", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: rgb(240, 248, 164);
+  }
+
+  .topo p {
+    font-family: "Roboto Custom", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1pt solid rgb(240, 248, 164);
+    border-bottom: 1pt solid rgb(240, 248, 164);
+    color: rgb(240, 248, 164);
+  }
+}
+
+/* Para telas muito pequenas */
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 50px;
+  }
+
+  .menu-suspenso {
+    top: 5px;
+    right: 5px;
+  }
+
+  .botao {
+    padding: 6px 10px;
+    font-size: 16pt;
+  }
+
+  .topo h4 {
+    font-size: 20px;
+  }
+
+  .topo p {
+    font-size: 24px;
+  }
+}
