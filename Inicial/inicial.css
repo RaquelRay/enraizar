@@ -8,7 +8,6 @@
   font-display: swap;
 }
 
-/* Fonte Regular (400) */
 @font-face {
   font-family: "Bebas Neue Custom";
   src: url(../Font/BebasNeueBold.woff2") format("woff2"),
@@ -49,6 +48,8 @@ body {
   overflow-x: hidden;
   padding-top: 90px;
   background-color: rgb(66, 133, 91);
+  padding-bottom: 50px;
+  border-bottom: 10px solid rgb(54, 101, 107);
 }
 
 a {
@@ -61,11 +62,11 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* Menu Fixo */
 .fixo {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   padding: 15px 20px;
   background-color: rgb(240, 248, 164);
   border-bottom: 8px solid rgb(54, 101, 107);
@@ -78,14 +79,6 @@ a:hover {
   z-index: 1000;
 }
 
-.conteudo-fixo {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Bloco 1 */
 .bloco1-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -102,7 +95,8 @@ a:hover {
 .bloco1-texto {
   grid-area: texto;
   color: rgb(240, 248, 164);
-  margin-left: 30px;
+  margin-top: 30px;
+  margin-left: 80px;
 }
 
 .bloco1-texto h4 {
@@ -129,11 +123,6 @@ a:hover {
   gap: 20px;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-}
-
-.bloco1-botoes button:focus {
-  outline: 4px solid rgb(72, 56, 56);
 }
 
 .bloco1-botoes .a,
@@ -160,6 +149,7 @@ a:hover {
   color: rgb(240, 248, 164);
 }
 
+/* Quando passa o mouse por cima do botao, ele fica roxo e aumenta o tamanho */
 .bloco1-botoes .a:hover,
 .bloco1-botoes .b:hover {
   transform: scale(1.05);
@@ -167,12 +157,10 @@ a:hover {
   color: rgb(240, 248, 164);
 }
 
-.bloco1-botoes .a:active,
-.bloco1-botoes .b:active {
-  transform: scale(0.98);
+/* Para acessibilidade: quando clica o botao, fica uma borda no botao selecionado*/
+.bloco1-botoes button:focus {
+  outline: 4px solid rgb(72, 56, 56);
 }
-
-/*bloco2*/
 
 .bloco2 {
   background-color: rgb(240, 248, 164);
@@ -201,7 +189,7 @@ a:hover {
   border-top: 2px solid rgb(66, 133, 91);
   border-bottom: 2px solid rgb(66, 133, 91);
   padding: 15px;
-  max-width: 80%;
+  max-width: 40%;
   margin: 0 auto;
 }
 
@@ -254,35 +242,33 @@ a:hover {
   line-height: 1.4;
 }
 
-/*bloco3*/
 .bloco3 {
-  position: relative;
   font-family: "Bebas Neue Custom", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 13pt;
-  min-height: auto; /*Largura automatica*/
-  height: auto;
   padding: 25pt;
   background-color: rgb(66, 133, 91);
   color: rgb(240, 248, 164);
   width: 100%;
-  border-bottom: 10px solid rgb(54, 101, 107);
+  margin: 0 auto;
 }
 
 .bloco3 h4 {
   letter-spacing: 3px;
   font-weight: 300;
-  font-size: 36pt;
+  font-size: 50pt;
   text-align: center;
   max-width: 90%;
   word-wrap: break-word;
   line-height: 0.9;
-  position: relative;
   z-index: 1;
-  padding: 20px 0 25px 0;
+  border-top: 2px solid rgb(240, 248, 164);
+  border-bottom: 2px solid rgb(240, 248, 164);
+  padding: 30px;
+  margin: 40px;
 }
 
 .bloco3 h4 strong {
@@ -314,25 +300,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-/* Tablet */
 @media (min-width: 480px) {
-  .fixo {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .conteudo-fixo {
-    gap: 30px;
-  }
-
-  .bloco1-container {
-    justify-items: center;
-    grid-template-areas:
-      "texto logo"
-      "botoes botoes";
-  }
-
   .bloco1-texto h4 {
     font-size: 34pt;
   }
@@ -348,16 +316,20 @@ a:hover {
   }
 
   .bloco1-logo img {
-    width: 250px;
+    width: 300px;
   }
 
-  /* Bloco 2 - Tablet */
+  .bloco2 {
+    padding: 20px 10px;
+  }
+
   .bloco2-a h4 strong {
-    font-size: 45pt;
+    font-size: 40pt;
   }
 
   .bloco2-a h4 {
-    font-size: 45pt;
+    font-size: 40pt;
+    max-width: 50%;
     padding: 20px;
   }
 
@@ -387,37 +359,22 @@ a:hover {
   }
 
   .fixo {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     padding: 15px 60px;
-  }
-
-  .conteudo-fixo {
     gap: 50px;
   }
 
-  /* Bloco 1 - Desktop */
   .bloco1-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas:
-      "texto logo"
-      "botoes botoes";
     gap: 40px;
     padding: 60px;
     max-width: 1400px;
-    justify-items: center;
   }
 
   .bloco1-texto {
-    grid-area: texto;
-    margin-left: 30px;
-    justify-self: end;
+    margin-left: 180px;
   }
 
   .bloco1-texto h4 {
-    font-size: 80pt;
+    font-size: 75pt;
   }
 
   .bloco1-texto p {
@@ -425,23 +382,14 @@ a:hover {
     max-width: 100%;
   }
 
-  .bloco1-logo {
-    grid-area: logo;
-    justify-self: start;
-  }
-
   .bloco1-logo img {
-    width: 550px;
+    width: 650px;
+    margin-top: 20px;
+    margin-right: 100px;
   }
 
   .bloco1-botoes {
-    grid-area: botoes;
-    display: flex;
-    flex-direction: row;
     gap: 80px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     width: 100%;
   }
 
@@ -449,11 +397,9 @@ a:hover {
   .bloco1-botoes .b {
     font-size: 35pt;
     padding: 20px 30px;
-    border-radius: 20pt;
     width: 280pt;
   }
 
-  /* Bloco 2 - Desktop */
   .bloco2 {
     padding: 60px 20px;
   }
@@ -488,5 +434,11 @@ a:hover {
   .bloco2-c p,
   .bloco2-d p {
     font-size: 24pt;
+  }
+
+  .bloco3 {
+    height: auto;
+    padding: 25pt;
+    width: 50%;
   }
 }
