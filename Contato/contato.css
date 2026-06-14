@@ -8,7 +8,6 @@
   font-display: swap;
 }
 
-/* Fonte Regular (400) */
 @font-face {
   font-family: "Bebas Neue Custom";
   src: url(../Font/BebasNeueBold.woff2") format("woff2"),
@@ -58,7 +57,6 @@ body {
   z-index: 1000;
 }
 .botao {
-  /* ... mesmo estilo ... */
   background-color: rgb(240, 248, 164);
   padding: 10px 15px;
   border-radius: 30px;
@@ -125,7 +123,6 @@ body {
   padding: 5px 20px;
 }
 
-/* --- Grid para duas colunas (Desktop) --- */
 .formulario-grid {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -135,7 +132,6 @@ body {
   border-radius: 20px;
 }
 
-/* --- Coluna de Informações --- */
 .info-contato {
   background-color: rgb(117, 176, 111);
   padding: 30px;
@@ -148,6 +144,7 @@ body {
   margin-bottom: 20px;
   display: inline-block;
 }
+
 .info-contato p {
   margin: 20px 0;
   font-size: 16px;
@@ -155,42 +152,48 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .info-contato i {
   width: 25px;
   font-size: 18px;
 }
+
 .redes-sociais {
   margin-top: 30px;
   display: flex;
   gap: 15px;
 }
+
 .redes-sociais a {
   color: rgb(72, 56, 56);
   font-size: 28px;
   transition: transform 0.3s;
 }
+
 .redes-sociais a:hover {
   transform: scale(1.2);
   color: rgb(240, 248, 164);
 }
 
-/* --- Coluna do Formulário --- */
 .form-contato fieldset {
   border: 2px solid rgb(240, 248, 164);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
 }
+
 .form-contato legend {
   font-family: "Bebas Neue Custom", sans-serif;
   font-size: 20px;
   color: rgb(240, 248, 164);
   padding: 0 10px;
 }
+
 .campo,
 .campo-radio {
   margin-bottom: 15px;
 }
+
 .campo label,
 .campo-radio span {
   display: block;
@@ -198,6 +201,7 @@ body {
   color: rgb(240, 248, 164);
   font-weight: bold;
 }
+
 .campo input,
 .campo select,
 .campo textarea {
@@ -208,27 +212,27 @@ body {
   background-color: rgb(240, 248, 164);
   font-family: "Roboto Custom", sans-serif;
 }
+
 .campo-radio label {
   margin-right: 15px;
   font-weight: normal;
   color: rgb(240, 248, 164);
 }
-.btn-enviar {
+
+.botao-enviar {
   width: 100%;
   background-color: rgb(240, 248, 164);
   color: rgb(72, 56, 56);
   padding: 15px;
   border: none;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
   font-family: "Bebas Neue Custom", sans-serif;
-  letter-spacing: 2px;
 }
 
-.btn-enviar:hover {
+.botao-enviar:hover {
   background-color: rgb(117, 176, 111);
   color: rgb(240, 248, 164);
   transform: scale(1.02);

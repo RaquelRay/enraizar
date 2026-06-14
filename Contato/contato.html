@@ -28,54 +28,34 @@
       </header>
 
       <section class="formulario-grid">
-        <!-- Coluna da Esquerda: Informações de Contato -->
         <div class="info-contato">
-          <h3><i class="fas fa-paper-plane"></i> Onde nos encontrar</h3>
+          <h3></class=> Onde nos encontrar</h3>
           <p>
             <i class="fas fa-map-marker-alt"></i> Camaquã - RS | Sítio Recanto
             da Lua
           </p>
-          <p><i class="fab fa-whatsapp"></i> (51) 99999-9999</p>
-          <p><i class="far fa-envelope"></i> contato@enraizar.org</p>
+          <p><i class="fab fa-whatsapp"></i> (53) 98122-9114</p>
+          <p><i class="far fa-envelope"></i> contato.enraizar@gmail.com</p>
           <div class="redes-sociais">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="http://www.instagram.com/en.raiz.ar"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/embed/fAuV4xsHpCQ?si=G3-DHQAajwKuJjGr"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
 
-        <!-- Coluna da Direita: Formulário -->
         <form action="#" method="post" class="form-contato">
-          <fieldset>
-            <legend>Dados Pessoais</legend>
+          <fieldset> <!-- Lembrando: Fieldset agrupa os campos relacionados e desenha uma borda ao redor dos elementos agrupados -->
+            <legend>Dados Pessoais</legend> <!-- legend coloca o titulo do bloco agrupado -->
             <div class="campo">
               <label for="nome">Nome Completo:</label>
-              <input
-                type="text"
-                id="nome"
-                name="nome"
-                placeholder="Seu nome"
-                required
-              />
+              <input placeholder="Seu nome"/> <!-- placeholder faz com que apareça "seu nome" na caixa para digitar o nome -->
             </div>
             <div class="campo">
               <label for="email">E-mail:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="seuemail@exemplo.com"
-                required
-              />
+              <input placeholder="seuemail@exemplo.com" />
             </div>
             <div class="campo">
               <label for="telefone">Telefone:</label>
-              <input
-                type="tel"
-                id="telefone"
-                name="telefone"
-                placeholder="(51) 99999-9999"
-              />
+              <input placeholder="(51) 99999-9999" />
             </div>
           </fieldset>
 
@@ -92,7 +72,7 @@
                 WhatsApp</label
               >
               <label>
-            </div>
+              </div>
             <div class="campo">
               <label for="assunto">Assunto:</label>
               <select id="assunto" name="assunto">
@@ -113,7 +93,7 @@
               ></textarea>
             </div>
           </fieldset>
-          <button type="submit" class="btn-enviar">ENVIAR MENSAGEM</button>
+          <button type="submit" class="botao-enviar">ENVIAR MENSAGEM</button>
         </form>
       </section>
     </main>
