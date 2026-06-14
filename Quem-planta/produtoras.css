@@ -8,10 +8,10 @@
   font-display: swap;
 }
 
-/* Fonte Regular (400) */
 @font-face {
   font-family: "Bebas Neue Custom";
-  src: url(../Font/BebasNeueBold.woff2") format("woff2"),
+  src:
+    url("../Font/BebasNeueBold.woff2") format("woff2"),
     url("../Font/BebasNeueBold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -49,11 +49,11 @@ body {
   overflow-x: hidden; /*para evitar rolagem horizontal*/
   padding-top: 100px;
   background-color: rgb(72, 56, 56);
+  padding-top: 40px;
 }
 
-/* Menu fixo */
 .menu-suspenso {
-  position: fixed;
+  position: fixed; /* Menu fixo */
   top: 20px;
   right: 20px;
   z-index: 1000;
@@ -110,35 +110,51 @@ body {
 
 .painel {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto;
   grid-template-areas:
-    "lateral-esq coluna1 coluna2"
-    "lateral-esq-baixo rodape rodape";
+    "topo"
+    "lateral-esq"
+    "lateral-esq-baixo"
+    "colunas"
+    "rodape";
   font-family: "Roboto Custom";
   justify-items: center;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .painel img {
-  max-width: 450px;
+  display: block;
+  max-width: 650px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
   border-radius: 10px;
   border: 8px solid rgb(240, 248, 164);
+  object-fit: cover; /*todas imagens com mesmo comportamento*/
 }
 
 .topo {
   grid-area: topo;
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: left;
 }
 
 .topo h4 {
   font-family: "Bebas Neue Custom", sans-serif;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 60px;
   color: rgb(240, 248, 164);
 }
 
 .topo p {
   font-family: "Roboto Custom", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   border-top: 1pt solid rgb(240, 248, 164);
@@ -151,117 +167,118 @@ body {
 }
 
 .lateral-esq-baixo {
-  grid-area: lateral-esq-baixo;
-  font-family: "Roboto Custom", sans-serif;
-  font-size: 12pt;
-  text-align: left;
+  display: block;
+  text-align: center;
+  padding-left: 30px;
   margin-bottom: 20px;
+  width: 100%;
+  font-size: 10pt;
+  font-style: italic;
+  color: rgb(117, 176, 111);
 }
 
-.coluna1 {
-  grid-area: coluna1;
+.fornecedora {
+  background-color: rgba(240, 248, 164, 0.1);
+  padding: 30px;
+  border-radius: 20px;
 }
 
-.coluna2 {
-  grid-area: coluna2;
+.colunas {
+  grid-area: colunas;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 650px;
+  margin-bottom: 20px;
+  font-size: 14pt;
+  font-family: "Roboto Custom", sans-serif;
+  font-weight: 100;
+  text-indent: 20px;
+  text-align: justify;
+  line-height: 1.2;
+  color: rgb(240, 248, 164);
+  hyphens: auto;
 }
 
 .rodape {
   grid-area: rodape;
-}
-
-@media screen and (max-width: 1980px) {
-  body {
-    padding-top: 40px;
-  }
-
-  .painel {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-areas:
-      "lateral-esq topo topo"
-      "lateral-esq-baixo coluna1 coluna2"
-      "rodape rodape rodape";
-    font-family: "Roboto Custom";
-    justify-items: center;
-    align-items: flex-start;
-    margin-right: 20px;
-  }
-
-  .topo {
-    text-align: left;
-    justify-content: left;
-    align-items: left;
-  }
-
-  .coluna1,
-  .coluna2 {
-    display: block;
-    font-family: "Roboto Custom", sans-serif;
-    font-size: 14pt;
-    font-weight: 100;
-    text-align: justify;
-    margin-right: 40px;
-    padding: 0 0 0 40px;
-    line-height: 1.2;
-    color: rgb(240, 248, 164);
-    hyphens: auto;
-    margin-bottom: 20px;
-  }
-
-  .coluna1 p:first-of-type,
-  .coluna2 p:first-of-type {
-    text-indent: 20px;
-  }
-
-  .painel img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .lateral-esq-baixo {
-    display: block;
-    text-align: left;
-    padding-left: 30px;
-    width: 100%;
-    font-size: 10pt;
-    font-style: italic;
-    color: rgb(117, 176, 111);
-  }
-
-  .rodape {
-    display: block;
-    justify-items: center;
-    text-align: center;
-    background-color: rgb(240, 248, 164);
-    color: rgb(72, 56, 56);
-    width: 100%;
-    padding: 10px;
-    border-top: 6px solid rgb(54, 101, 107);
-  }
-
-  .rodape i {
-    color: rgb(72, 56, 56);
-  }
+  color: rgb(72, 56, 56);
+  display: block;
+  text-align: center;
+  background-color: rgb(117, 176, 111);
+  color: rgb(72, 56, 56);
+  width: 100%;
+  padding: 10px;
+  border-bottom: 6px solid rgb(54, 101, 107);
 }
 
 /* Media Query para Mobile */
 @media screen and (max-width: 768px) {
-  body {
-    padding-top: 30px;
-  }
-
-  .topo {
-    margin-bottom: 20px;
-  }
-
   .menu-suspenso {
     position: fixed;
     top: 10px;
     right: 10px;
     z-index: 1000;
+  }
+
+  .topo {
+    margin-bottom: 20px;
+    padding: 0;
+    width: 100%;
+  }
+
+  .topo h4 {
+    font-family: "Bebas Neue Custom", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: rgb(240, 248, 164);
+    text-align: center;
+  }
+
+  .topo p {
+    font-family: "Roboto Custom", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 1pt solid rgb(240, 248, 164);
+    border-bottom: 1pt solid rgb(240, 248, 164);
+    color: rgb(240, 248, 164);
+  }
+
+  .lateral-esq {
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .painel img {
+    width: 90%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .colunas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 450px;
+    margin: 20px;
+    padding: 0;
+    font-size: 12pt;
+    text-align: justify;
+  }
+
+  .lateral-esq-baixo {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
   }
 
   .botao {
@@ -290,60 +307,22 @@ body {
   }
 
   .painel {
-    grid-template-columns: 1fr; /* uma única coluna */
+    grid-template-columns: 1fr;
     grid-template-areas:
       "topo"
       "lateral-esq"
       "lateral-esq-baixo"
-      "coluna1"
-      "coluna2"
+      "colunas"
       "rodape";
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
   }
 
-  /* Mantendo as configurações originais do topo no mobile */
-  .topo {
-    padding: 0;
-  }
-
-  .topo h4 {
-    font-family: "Bebas Neue Custom", sans-serif;
-    font-weight: 300;
-    font-size: 40px;
-    color: rgb(240, 248, 164);
-  }
-
-  .topo p {
-    font-family: "Roboto Custom", sans-serif;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    border-top: 1pt solid rgb(240, 248, 164);
-    border-bottom: 1pt solid rgb(240, 248, 164);
-    color: rgb(240, 248, 164);
-  }
-}
-
-/* Para telas muito pequenas */
-@media screen and (max-width: 480px) {
-  body {
-    padding-top: 50px;
-  }
-
-  .menu-suspenso {
-    top: 5px;
-    right: 5px;
-  }
-
-  .botao {
-    padding: 6px 10px;
-    font-size: 16pt;
-  }
-
-  .topo h4 {
-    font-size: 20px;
-  }
-
-  .topo p {
-    font-size: 24px;
+  .fornecedora {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
