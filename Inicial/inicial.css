@@ -316,7 +316,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-@media (min-width: 480px) and (max-width: 1023px) {
+@media (min-width: 480px) and (max-width: 1200px) {
   .fixo {
     font-size: 22pt;
   }
@@ -373,7 +373,7 @@ a:hover {
 }
 
 /* Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 1201px) {
   body {
     padding-top: 50px;
   }
