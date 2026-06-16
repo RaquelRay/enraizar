@@ -316,7 +316,7 @@ a:hover {
   margin-bottom: 15px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .fixo {
     font-size: 22pt;
   }
