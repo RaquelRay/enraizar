@@ -67,12 +67,12 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   padding: 15px 20px;
   background-color: rgb(240, 248, 164);
   border-bottom: 8px solid rgb(54, 101, 107);
   font-family: "Bebas Neue Custom", "Bebas Neue", sans-serif;
-  font-size: 18pt;
+  font-size: 22pt;
   font-weight: bold;
   position: fixed;
   top: 0;
@@ -97,12 +97,12 @@ a:hover {
   grid-area: texto;
   color: rgb(240, 248, 164);
   margin-top: 30px;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 .bloco1-texto h4 {
   font-family: "Bebas Neue Custom";
-  font-size: 55px;
+  font-size: 60px;
   line-height: 0.95;
   font-weight: 300;
 }
@@ -174,8 +174,13 @@ a:hover {
   color: rgb(72, 56, 56);
   text-align: center;
   line-height: 0.9;
-  padding: 30px 20px;
-  max-width: 100%;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: sticky;
+  top: 90px; /* Ajuste para o menu fixed - mesmo valor do padding top */
+  z-index: 999; /*Abaixo do menu z-index 1000) */
+  background-color: rgb(240, 248, 164); /* fundo pra nao ficar transparente */
 }
 
 .bloco2-a h4 strong {
@@ -249,7 +254,8 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 13pt;
+  text-align: justify;
+  gap: 40pt;
   padding: 25pt;
   background-color: rgb(66, 133, 91);
   color: rgb(240, 248, 164);
@@ -257,19 +263,28 @@ a:hover {
   margin: 0 auto;
 }
 
+.bloco3-a {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: sticky;
+  top: 90px;
+  z-index: 999;
+  background-color: rgb(66, 133, 91);
+}
+
 .bloco3 h4 {
   letter-spacing: 3px;
   font-weight: 300;
   font-size: 50pt;
   text-align: center;
-  max-width: 90%;
   word-wrap: break-word;
   line-height: 0.9;
-  z-index: 1;
   border-top: 2px solid rgb(240, 248, 164);
   border-bottom: 2px solid rgb(240, 248, 164);
-  padding: 30px;
-  margin: 40px;
+  padding: 15px;
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 .bloco3 h4 strong {
@@ -302,12 +317,16 @@ a:hover {
 }
 
 @media (min-width: 480px) {
+  .fixo {
+    font-size: 22pt;
+  }
+
   .bloco1-texto h4 {
-    font-size: 34pt;
+    font-size: 42pt;
   }
 
   .bloco1-texto p {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .bloco1-botoes .a,
@@ -317,7 +336,7 @@ a:hover {
   }
 
   .bloco1-logo img {
-    width: 300px;
+    width: 370px;
   }
 
   .bloco2 {
@@ -325,11 +344,11 @@ a:hover {
   }
 
   .bloco2-a h4 strong {
-    font-size: 40pt;
+    font-size: 60pt;
   }
 
   .bloco2-a h4 {
-    font-size: 40pt;
+    font-size: 60pt;
     max-width: 50%;
     padding: 20px;
   }
@@ -337,19 +356,19 @@ a:hover {
   .bloco2-b img,
   .bloco2-c img,
   .bloco2-d img {
-    width: 100px;
+    width: 150px;
   }
 
   .bloco2-b h4,
   .bloco2-c h4,
   .bloco2-d h4 {
-    font-size: 32pt;
+    font-size: 40pt;
   }
 
   .bloco2-b p,
   .bloco2-c p,
   .bloco2-d p {
-    font-size: 12pt;
+    font-size: 20pt;
   }
 }
 
@@ -360,8 +379,9 @@ a:hover {
   }
 
   .fixo {
+    font-size: 30pt;
     padding: 15px 60px;
-    gap: 50px;
+    gap: 120px;
   }
 
   .bloco1-container {
