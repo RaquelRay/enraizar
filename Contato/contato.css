@@ -246,7 +246,7 @@ body {
   transform: scale(1.02);
 }
 
-@media screen and (max-width: 768px) {
+@media (min-width: 400px) and (max-width: 1200px) {
   body {
     padding-top: 60px;
   }
