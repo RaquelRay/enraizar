@@ -210,6 +210,11 @@ body {
 
 /* Media Query para Mobile */
 @media (min-width: 400px) and (max-width: 1200px) {
+  .menu-suspenso {
+    top: 10px;
+    right: 10px;
+  }
+
   .topo {
     margin-bottom: 20px;
     padding: 0;
@@ -262,6 +267,16 @@ body {
     margin: 0 auto;
     text-align: center;
     padding: 0;
+  }
+
+  .botao {
+    background-color: rgb(240, 248, 164);
+    color: rgb(72, 56, 56);
+    padding: 8px 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
   }
 
   .conteudo a {
