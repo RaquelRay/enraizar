@@ -198,6 +198,10 @@ a:hover {
 .bloco2-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* repeat = repete o padrao de colunas, auto-fit em vez de decidir quantas colunas, o navegador 
+  conta a largura disponivel do container e encaixa o maior numero possivel de colunas que caibam ali
+  A coluna não fica mais estreita que 280px, e pode crescer até ocupar 1 parte do espaço restante disponivel 
+  */
   gap: 10px;
   max-width: 1200px;
   margin: 0 auto;

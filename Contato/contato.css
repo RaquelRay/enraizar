@@ -97,7 +97,7 @@ body {
 }
 
 .menu-suspenso:hover .conteudo {
-  display: block;
+  display: block; /* Se não uso display block, o menu nao aparece quando passo o mouse no botao */
 }
 
 .container-contato {
@@ -264,5 +264,11 @@ body {
   .menu-suspenso {
     top: 10px;
     right: 10px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .conteudo a {
+    font-size: 20px;
   }
 }

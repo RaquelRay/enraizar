@@ -10,7 +10,8 @@
 
 @font-face {
   font-family: "Bebas Neue Custom";
-  src: url(../Font/BebasNeueBold.woff2") format("woff2"),
+  src:
+    url("../Font/BebasNeueBold.woff2") format("woff2"),
     url("../Font/BebasNeueBold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
@@ -158,4 +159,10 @@ body {
   height: 100%;
   border-radius: 8px;
   border: 6px solid rgb(240, 248, 164);
+}
+
+@media (min-width: 1201px) {
+  .conteudo a {
+    font-size: 20px;
+  }
 }

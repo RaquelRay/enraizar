@@ -8,6 +8,9 @@
   font-display: swap;
 }
 
+/*O navegador mostra uma fonte padrão rapidamente e, quando a personalizada carregar,
+troca (swap) sem travar a exibição do texto. Isso melhora a performance visual. */
+
 @font-face {
   font-family: "Bebas Neue Custom";
   src: url(../Font/BebasNeueBold.woff2") format("woff2"),
@@ -314,5 +317,11 @@ td {
   .botao-finalizar {
     padding: 12px;
     font-size: 16px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .conteudo a {
+    font-size: 20px;
   }
 }
