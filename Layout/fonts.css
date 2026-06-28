@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Bebas Neue Custom";
+  src:
+    url("../Font/BebasNeueLight.woff2") format("woff2"),
+    url("../Font/BebasNeueLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bebas Neue Custom";
+  src:
+    url("../Font/BebasNeueBold.woff2") format("woff2"),
+    url("../Font/BebasNeueBold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Custom";
+  src:
+    url("../Font/Roboto-Light.woff2") format("woff2"),
+    url("../Font/Roboto-Light.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Custom";
+  src:
+    url("../Font/Roboto-Regular.woff2") format("woff2"),
+    url("../Font/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+header {
+  font-family: "Bebas Neue Custom";
+}
+
+body {
+  font-family: "Roboto Custom";
+}
+
+h4 {
+  font-family: "Bebas Neue Custom";
+}
+
+h3 {
+  font-family: "Roboto Custom";
+}
+
+p {
+  font-family: "Roboto Custom";
+}
